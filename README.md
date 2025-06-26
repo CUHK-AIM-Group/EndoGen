@@ -20,13 +20,13 @@ Endoscopic video generation is crucial for advancing medical imaging and enhanci
 
 ## 💡 Simple Generation with Pretrained EndoGen 
 
-Download pretrained [VQGAN](https://huggingface.co/FoundationVision/LlamaGen/resolve/main/vq_ds16_c2i.pt), our [trained model on hyperkvasir](https://github.com/CUHK-AIM-Group/EndoGen/releases/download/models/hyperkvasir_model_0054236.pt), put them into ./pretraiend_models. Then run:
+Download pretrained [VQGAN](https://huggingface.co/FoundationVision/LlamaGen/resolve/main/vq_ds16_c2i.pt), our [trained model on hyperkvasir](https://github.com/CUHK-AIM-Group/EndoGen/releases/download/models/hyperkvasir_model_0054236.pt), put them into ./pretrained_models. Then run:
 ```
 bash sample_c2i_512_demo.sh
 ```
 The sampled results of 8 classes in HyperKvasir dataset will be saved in ./demo_endogen. Modify "--seed" in the script to produce different generated results.
 
-For surgvidom, download [trained model on surgvisdom](https://github.com/CUHK-AIM-Group/EndoGen/releases/download/models/surgvisdom_model_0065324.pt), put it into ./pretraiend_models. Then modify "--gpt-ckpt" to "./pretrained_models/surgvisdom_model_0065324.pt", "--num-classes" to 3. Then also run the above script.
+For surgvidom, download [trained model on surgvisdom](https://github.com/CUHK-AIM-Group/EndoGen/releases/download/models/surgvisdom_model_0065324.pt), put it into ./pretrained_models. Then modify "--gpt-ckpt" to "./pretrained_models/surgvisdom_model_0065324.pt", "--num-classes" to 3. Then also run the above script.
 
 ## 🛠 Training
 See [Training](TRAINING.md) for installation, training and evaluation.
